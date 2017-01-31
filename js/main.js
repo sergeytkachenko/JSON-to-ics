@@ -100,6 +100,10 @@ function download(data, filename, type) {
 }
 
 // устанавливаем значение текущей даты в dtStamp форматируя его под формат ICS
+/**
+let now = new Date();
+now.toISOString().replace(/-|:|\..*$/g, ""); 
+ **/
 function dtStampGenerate(){
 	var d = new Date();
 	var datestring = d.getFullYear() + "" + ("0"+(d.getMonth()+1)).slice(-2) + ("0" + d.getDate()).slice(-2) + "T"
